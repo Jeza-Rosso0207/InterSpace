@@ -1,0 +1,145 @@
+/* Estilos para el logo de carrito de compras */
+img {
+    float: left;
+    margin-right: 100px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+    width: 75px;
+    height: auto;
+    transition: transform 0.3s ease; /* Transición suave al aplicar la animación */
+    cursor: pointer; /* Cambia el cursor a una mano */
+}
+
+/* Aplica la animación al pasar el cursor */
+img:hover {
+    animation: shake 0.5s; /* Nombre de la animación y duración */
+    animation-iteration-count: 1; /* Ejecutar una vez */
+    animation-timing-function: ease-in-out; /* Aceleración y desaceleración suave */
+}
+
+/* Definición de la animación de sacudida */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0); /* Posición inicial */
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px); /* Movimiento hacia la izquierda */
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px); /* Movimiento hacia la derecha */
+    }
+}
+
+.separador {/*La linea separadora*/
+    clear: both; /* Limpia el float de los elementos anteriores */
+    margin-top: 10px; /* Agrega un margen superior para separar del menú */
+    height: 3px;
+    background-color: #000; /* Color de la línea */
+}
+/*-------------------------------------------------------------------------------------------------------------*/
+body {
+    margin: 0;
+    padding: 20px;
+    color: #111010;
+    background-color: rgba(230, 223, 223, 0.945);
+}
+h1 { /*Titulo mis compras*/
+    text-align: left;
+    color: #000000;
+    font-family: "Courier New", monospace;
+}
+h2 { /*Titulo Paquetes*/
+    text-align: left;
+    color: #000000;
+    font-family: "Courier New", monospace;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin-bottom: 10px;
+    padding: 35px;
+    border: 1px solid #0e0c0c;
+    background-color: #fffefe;
+    box-sizing: border-box;
+    font-family: "Courier New", monospace;
+    border-radius: 7px;
+    transition: all 0.3s ease; /* Efecto de hover */
+}
+/* Efecto de hover para los elementos de la lista */
+li:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px #a50559;
+}
+/*-------------------------------------------------------------------------------------------------------------*/
+button {/*Boton Volver*/
+    top: 600px;
+    right: 50px;
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 3px solid #a50559;
+    border-radius: 50px;
+    margin-top: 20px; /*Subir*/
+    cursor: pointer; /* Cambia el cursor a una mano */
+    
+}
+
+button:hover {
+    background-color: #a50559;
+}
+  
+.buttons {
+    min-width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 100px;
+    margin-top: 45px; 
+}
+.buttons a {
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #020608;
+    color: #f1f1f1;
+    border-radius: 50%;
+    transition: all .4s ease-in-out;
+    margin: 0 10px; 
+    border: 2px solid #a50559;
+}
+.buttons a:hover {
+    transform: scale(1.2);
+}
+/*-------------------------------------------------------------------------------------------------------------*/
+/*Dejanos tu opinion*/
+.opinion-link {
+    position: fixed;
+    top: 37px; /* Ajusta la posición vertical */
+    right: 1000px; /* Ajusta la posición horizontal */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 3px solid #a50559;
+    border-radius: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.opinion-link:hover {
+    background-color: #a50559;
+}

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inter Space</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"><!--Icono-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Contactanos-->
+    <link href="style.css" rel="stylesheet" type="text/css"><!--Conexion con css-->
+    <!--Agrega el enlace a Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+    <link rel="icon" type="image/png" href="Imagenes\logo4m.png"> <!--Logo en el navegador-->
+
+
+</head>
+<body>
+    <img src="Imagenes\Logo4m.png" alt="Logo de Inter Space"><!--Logo-->
+<nav>
+    <!--Menu-->
+    <ul id="menu">
+    <li><a href="#inicio">Inicio</a></li>
+    <li><a href="#paquetes">Destinos</a></li>
+    <li><a href="#ofertas">Destacados</a></li>
+    <li><a href="#contactanos">Contactanos</a></li>
+    </ul>
+</nav>
+
+<div class="separador"></div><!--La linea que separa-->
+
+<script src="script.js"></script><!--Conexion con la carpeta de jv-->
+
+
+<!--Definicion de cada seccion-->
+<section id="inicio">
+    <p><!--Quiero Saber mas y su icono-->
+        <a href="QuieroSaberMas.html" style="text-decoration: none;">
+            <i class="fas fa-external-link-square-alt"></i> ¡Quiero saber más!
+        </a>
+    </p>
+    <div id="titulo-container">
+        <div id="subrayado"></div>
+        <h1 id="titulo">Inter Space</h1>
+    </div>
+    <h2><!--Segundo titulo-->
+        Donde la verdadera
+        <br>
+        aventura comienza
+    </h2>
+    <!--Galeria de fotos-->
+    <div class="image-gallery">
+        <img src="Imagenes\Imagen3.jpeg" alt="Pluton">
+        <img src="Imagenes\Imagen2.jpeg" alt="Marte">
+        <img src="Imagenes\Imagen1.jpeg" alt="luna2">
+    </div>
+
+   <!--El boton "Empezar" que abre el login-->
+    <a href="Login.html" style="text-decoration: none;">
+        <button>
+            <span>Mis compras</span>
+        </button>
+    </a>
+</section>
+
+<section id="paquetes">
+    <h2>Destinos</h2>
+    <div class="mostrador" id="mostrador">
+        <div class="fila">
+            <!--Foto de Luna-->
+         <div class="item" onclick="cargar(this)" data-comentario="¡Prepárate para un increíble viaje a la Luna, donde descubrirás los secretos de nuestro satélite más cercano!" data-precio="50000" >
+             <div class="contenedor-foto">
+               <img src="Imagenes\luna2.jpeg" alt="">
+            </div>
+                <span class="descripcion custom-font">Luna</span> <br>
+                <span class="precio custom-font">$50,000</span>
+                <span class="viaje-id">1</span>
+         </div>
+
+             <!--Foto de Marte-->
+         <div class="item" onclick="cargar(this)" data-comentario="¡Embárcate en un épico viaje a Marte y descubre un mundo rojo lleno de misterios por revelar!"data-precio="80000" >
+             <div class="contenedor-foto">
+                 <img src="Imagenes\Marte2.jpeg" alt="">
+             </div>    
+                 <span class="descripcion custom-font">Marte</span> <br>
+                 <span class="precio custom-font">$80,000</span>
+                 <span class="viaje-id">2</span>
+
+         </div>
+
+             <!--Foto de Jupiter-->
+            <div class="item" onclick="cargar(this)"data-comentario="¡Viaja a Júpiter y sumérgete en la grandeza de este gigante gaseoso, donde los misterios del cosmos te esperan!"data-precio="100000" >
+                <div class="contenedor-foto">
+                    <img src="Imagenes\Jupiter.jpeg" alt="">
+                </div>
+                    <span class="descripcion custom-font">Jupiter</span> <br>
+                    <span class="precio custom-font">$100,000</span>
+                    <span class="viaje-id">3</span>
+
+            </div>
+
+             <!--Foto de Saturno-->
+             <div class="item" onclick="cargar(this)"data-comentario="¡Descubre los misterios de Saturno en un emocionante viaje espacial, donde sus enigmáticos anillos y su majestuosidad te dejarán sin aliento!" data-precio="120000" >
+                <div class="contenedor-foto">
+                    <img src="Imagenes\Saturno2.jpeg" alt="">
+                </div>
+                    <span class="descripcion custom-font">Saturno</span> <br>
+                    <span class="precio custom-font">$120,000</span>
+                    <span class="viaje-id">4</span>
+
+            </div>
+        </div>
+        <div class="fila">
+            <!--Foto de Urano-->
+            <div class="item" onclick="cargar(this)"data-comentario="¡Zarpa hacia Urano y adéntrate en un viaje cósmico único, explorando un mundo helado y fascinante en los confines del sistema solar!" data-precio="140000" >
+             <div class="contenedor-foto">
+                 <img src="Imagenes\Urano2.jpeg" alt="">
+             </div>
+                 <span class="descripcion custom-font">Urano</span> <br>
+                 <span class="precio custom-font">$140,000</span>
+                 <span class="viaje-id">5</span>
+
+            </div>
+
+             <!--Foto de Neptuno-->
+            <div class="item" onclick="cargar(this)"data-comentario="¡Embarca en un emocionante viaje a Neptuno y sumérgete en las profundidades azules de este planeta distante, donde secretos cósmicos te esperan! " data-precio="160000">
+             <div class="contenedor-foto">
+                 <img src="Imagenes\Neptuno2.jpeg" alt="">
+             </div>
+                 <span class="descripcion custom-font">Neptuno</span> <br>
+                 <span class="precio custom-font">$160,000</span>
+                 <span class="viaje-id">6</span>
+
+            </div>
+
+             <!--Foto de Pluton-->
+            <div class="item" onclick="cargar(this)"data-comentario="Experimenta la tranquilidad y la grandeza del lejano planeta enano Plutón"data-precio="180,000" >
+                <div class="contenedor-foto">
+                    <img src="Imagenes\Pluton2.jpeg" alt="">
+                </div>
+                    
+                    <span class="descripcion custom-font">Pluton</span> <br>
+                    <span class="precio custom-font">$180,000</span>
+                    <span class="viaje-id">7</span>
+
+                </div>
+
+             <!--Foto de Antares-->
+            <div class="item" onclick="cargar(this)" data-comentario="Adéntrate en las maravillas celestiales y la intensa luminosidad de la estrella Antares"data-precio="200000">
+                <div class="contenedor-foto">
+                    <img src="Imagenes\Antares2.jpeg" alt="">
+                    
+                    <!--<p class="descripcion">Antares</p>-->
+                    <span class="descripcion custom-font">Antares</span><br>
+                    <!--<span class="comentario">Adéntrate en las maravillas celestiales y la intensa luminosidad de la estrella Antares</span><br><br>-->
+                    <span class="precio custom-font">$200,000</span>
+                    <span class="viaje-id">8</span>
+
+                </div>
+        </div>
+    </div>
+
+    <!--Contenedor del item seleccionado-->
+    <div class="seleccion" id="seleccion">
+        <div class="cerrar" onclick="cerrar()">
+            &#x2715
+        </div>
+        <div class="info">
+            <img src="" alt="" id="img">
+            <h2 id="modelo">Precio</h2>
+            <p id="descripcion">Descripcion</p>
+
+            <span class="precio" id="precio">1233</span>
+            <!--Lista despegable-->
+            <div class="fila">
+                <div class="size">
+                    <label for="viajeros-select">Cantidad de pasajeros:</label>
+                    <select id="viajeros-select" name="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <a href="Login.html" style="text-decoration: none;">
+                    <button2>Comprar</button2>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<section id="ofertas">
+    <h2>Destacados</h2>
+    <div class="container">
+
+        <div class="card">
+            <figure>
+                <img src="Imagenes\Planeta1.jpeg">
+            </figure>
+            <div class="contenido">
+                <h3>
+                    Destino: Planeta Estelaris <br>
+                    Duración del viaje: 2 días y 1 noche <br>
+                    Hospedaje: Estelaris Stellar Retreat <br>
+                    Explora la Ciudad Estelar, experimenta la gravedad cero, 
+                    aventúrate en los Cañones de Cristal y relájate en las aguas termales alienígenas.<br>
+                </h3>
+                <p>$100.000 </p>
+                <a href="Login.html" >Comprar</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <figure>
+                <img src="Imagenes\Planeta2.jpeg">
+            </figure>
+            <div class="contenido">
+                <h3>
+                    Destino: Planeta Aurorion <br>
+                    Duración del viaje: 2 días y 1 noche <br>
+                    Hospedaje: Aurorion Celestial Haven <br>
+                    Explora los campos de cristales luminosos, admira las auroras  
+                    y sumérgete en la cultura local durante tu visita de dos días a Aurorion.<br>
+                </h3>
+                <br>
+                <p>$150.000 </p>
+                <a href="Login.html" >Comprar</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <figure>
+                <img src="Imagenes\Planeta3.jpeg">
+            </figure>
+            <div class="contenido">
+                <h3>
+                    Destino: Planeta Crimsona <br>
+                    Duración del viaje: 2 días y 1 noche <br>
+                    Hospedaje: Crimsona Scarlet Oasis <br>
+                    Explora los paisajes marcianos, realiza una caminata espacial 
+                    y descubre los secretos del misterioso planeta rojo, Crimsona, durante tu visita de dos días.<br>
+                </h3>
+                <p>$200.000 </p>
+                <a href="Login.html" >Comprar</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<canvas id="miGrafico"></canvas>
+
+<section id="contactanos">
+    <body>
+        <section class="buttons">
+          <a href="https://www.facebook.com/NASA?mibextid=ZbWKwL" class="fa fa-facebook"></a>
+          <a href="https://instagram.com/nasa_es?igshid=MzRlODBiNWFlZA==" class="fa fa-instagram"></a>
+          <a href="tel:+1234567890" class="fa fa-phone"></a>
+          <a href="mailto:interspaceonline2023@gmail.com" class="fa fa-envelope"></a>
+        </section>
+        <a href="https://forms.gle/4BeVDo457iXrmuCf6" class="opinion-link">Dejanos tu opinión</a>
+    </body>
+</section>
+
+</body>
+</html>

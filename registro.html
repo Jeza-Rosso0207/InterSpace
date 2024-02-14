@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link href="registro.css" rel="stylesheet" type="text/css"><!--Conexion con css-->
+    <link rel="icon" type="image/png" href="Imagenes\logo4m.png">
+</head>
+<body><!--Registro de personas-->
+    <div class="formulario">
+        <h1>Registro</h1>
+        <form method="post" action="registro.php"><!-- conexion con php -->
+            <div class="correo">
+                <input type="text" name="correo" required><!-- Asigna el nombre "correo" -->
+                <label>Correo electrónico</label>
+            </div>
+            <div class="nombre">
+                <input type="text" name="nombre" required><!-- Asigna el nombre "nombre" -->
+                <label>Nombre</label>
+            </div>
+            <div class="contrasena">
+                <input type="password" name="contrasena" required><!-- Asigna el nombre "contrasena" -->
+                <label>Contraseña</label>
+            </div>
+            <input type="submit" value="Registrarse">
+        </form><!-- conexion con php -->
+    </div>
+</body>
+</html>

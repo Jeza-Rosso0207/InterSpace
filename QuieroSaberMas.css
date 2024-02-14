@@ -1,0 +1,137 @@
+.inicio {
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-right: 0px; /* Margen derecho*/
+    position: relative;
+    margin-top: -10px; /*Subir*/
+
+}
+.inicio img {
+    width: 100%;
+    height: auto;
+}
+body {
+    margin: 0; /* Asegura que no haya márgenes en el cuerpo de la página */
+    padding: 0; /* Asegura que no haya relleno en el cuerpo de la página */
+    background-color: #fffbfb;
+}
+.container {
+    display: flex;
+    margin: 70px 10px 30px 20px; /* Ajusta los márgenes como desees */
+}
+  
+.text-container {
+    flex: 1;
+    padding: 10px;
+    font-family: Helvetica;
+    margin-left: 100px; /* Ajusta el margen izquierdo según sea necesario */
+    font-weight: bold;
+}
+.text-container2{
+    flex: 1;
+    padding: 10px;
+    font-family: Helvetica;
+    margin-left: 100px; /* Ajusta el margen izquierdo según sea necesario */
+    font-weight: bold;
+    margin-top: -100px;
+}
+
+.image-container img{
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: -20px;
+    margin-right: 50px; /* Agrega un margen derecho de 20px */
+    transform: translateX(-100%);
+    animation: slideIn 3s forwards;
+}
+.image-containera img{
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: -20px;
+    margin-right: 50px; /* Agrega un margen derecho de 20px */
+    transform: translateX(-100%);
+    animation: slideIn 3s forwards;
+}
+.image-containert img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: -280px;
+    margin-right: 50px; /* Agrega un margen derecho de 20px */
+    transform: translateX(-100%);
+    animation: slideIn 3s forwards;
+}
+
+/*Parte de la animacion*/
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+/*Volver*/
+button {
+    cursor: pointer; /* Cambia el cursor a una mano */
+    position: fixed;
+    top: 600px;
+    right: 50px;
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 3px solid #a50559;
+    border-radius: 50px;
+    margin-top: -10px; /*Subir*/
+    cursor: pointer; /* Cambia el cursor a una mano */
+}
+
+button:hover {
+    background-color: #a50559;
+}
+
+#containers {
+    position: relative;
+}
+/*Final*/
+section{
+    display: flex;
+    margin-bottom: -70px;/*Bajar*/
+}  
+#contactanos{
+    background:rgb(80, 74, 74);
+}
+.buttons {
+    min-width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 100px; 
+    
+}
+.buttons a {
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #020608;
+    color: #f1f1f1;
+    border-radius: 50%;
+    transition: all .4s ease-in-out;
+    margin: 0 10px; 
+    border: 2px solid #a50559;
+}
+.buttons a:hover {
+    transform: scale(1.2);
+}

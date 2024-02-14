@@ -1,0 +1,531 @@
+/*Inicio*/
+img {/*logo*/
+    float: left;
+    margin-right: 100px; 
+    margin-bottom: 10px; /* Agrega un margen inferior al logo */
+    margin-left: 30px;
+    width: 75px; /* Ajusta el ancho del logo */
+    height: auto; /* El alto se ajustará automáticamente para mantener las proporciones */  
+}
+*{
+    margin: 4;
+    padding: 4;
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+}
+.separador {/*La linea separadora*/
+    clear: both; /* Limpia el float de los elementos anteriores */
+    margin-top: 10px; /* Agrega un margen superior para separar del menú */
+    height: 3px;
+    background-color: #000; /* Color de la línea */
+}
+p{/*¡Quiero saber mas!*/
+    font-family: Arial, sans-serif;/*Tipo de letra*/
+    margin-left: 70px; /* Separar el titulo del margen izquierdo */
+}
+p i {/*Icono de ¡Quiero saber mas!*/
+    font-size: 16px; /* Ajusta el tamaño del icono */
+    color: #110a0a; /* Ajusta el color del icono */
+    margin-right: 2px; /* Agrega un margen derecho pequeño para separar el icono del texto */
+}
+/*El titulo y su animacion*/
+#titulo-container {
+    position: relative;
+    overflow: hidden;
+}
+#subrayado {
+    width: 100%;
+    height: 3px;
+    background-color: #a50559; /* Cambia el color del subrayado */
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    transform-origin: right;
+    transform: scaleX(1); /* Inicialmente con ancho */
+    transition: transform 2s ease-in-out; /* Animación de 1 segundo */
+}
+#titulo {
+    font-family: Arial, sans-serif;
+    margin-left: 70px;
+    font-size: 70px;
+    line-height: 1.1;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 1s ease-in-out; /* Animación de 1 segundo */
+}
+
+h2 {/*Donde la verdadera aventura comienza*/
+    font-family: Arial, sans-serif;
+    display: block;
+    margin-left: 70px;/*Separar el h2 del margen izquierdo */
+    line-height: 1.1;/*El glosor del renglon*/
+}
+button {/*Boton empezar que abre un login*/
+    border: 0;
+    background-image: linear-gradient(
+        150deg, 
+        #9500ff, 
+        #09f, 
+        #00DDFF
+    );
+    border-radius: 50px;
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    padding: 4px;
+    cursor: pointer;
+    transition: .3s;
+    margin-left: 70px; /* Agrega margen izquierdo de 10px */
+    margin-top: -310px; /* Subir el boton */
+}
+button span{
+    background-color: #111;
+    padding: 16px 29px;
+    border-radius: 50px;
+    transition: .3s;
+}
+button:hover span{
+    background: none;
+}
+button:active{
+    transform: scale(0.9);
+}
+body {/*Color del fondo*/
+    background-color: rgba(230, 223, 223, 0.945); /* Cambia "#ff0000" por el código de color que desees */
+}
+html{/*Para dezplazar las secciones*/
+    scroll-behavior: smooth;
+}
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Menu fijo*/
+nav{
+    background: #0c0c0c;/*Color del menu*/
+    position: fixed;/* Que se mueva el menú según se mueva la página */
+    right: 20%;/* Porcentaje de la posición del menú */
+    top: 20px;/* Separar de arriba */
+    transform: translateX(50%);
+    border: 3px solid #a50559;/* Color del borde del menú */
+    border-radius: 50px;/* Redondear los bordes */
+    justify-content: flex-start; /* Alineación a la izquierda */
+    z-index: 1;
+}
+nav ul{
+    list-style: none;/* Elimina los estilos de viñetas de la lista */
+    display: flex;/*Para que sea flexible el menu*/
+}
+nav ul li a{
+    text-decoration: none;/* Elimina la decoración de subrayado del enlace */
+    font-size: 20px;/* Establece el tamaño de fuente del enlace a 20 píxeles */
+    color: #fff;/*Color de las letras*/
+    padding: 10px 15px;/*Largo y ancho del menu*/
+}
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
+/*Cada seccion inicio, ofertas, paquetes y contacto*/
+section{
+    height: calc((100% - 3 * 20px) / 3);/*La separacion de cada seccion*/
+    display: flex;
+    flex-direction: column;/*Posicion*/
+    justify-content: flex-start; /* Alinea los elementos a la izquierda verticalmente */
+    align-items: flex-start;
+    text-align: left;
+    color: #000000;/*Color de letras*/
+    margin-bottom: 20px;
+}
+/*Borrar .inicio .paquetes, . contactos y .ofertas, tambien modificar height: 100% y borrar*/
+.inicio {
+    height: auto;
+}
+  
+.paquetes, .contactos, .ofertas {
+    height: auto;
+}
+section h2{
+    font-size: 30px;/*Tamaño de las letras de secciones*/
+    font-family: "Courier New", monospace;
+}
+section p{
+    font-size: 20px;/*Tamaño de las letras del contenido de cada seccion*/
+    max-width: 800px;
+    margin:  1 auto;
+}
+/*Colores de cada seccion*/
+#paquetes{
+    background: rgba(230, 223, 223, 0.945);
+}
+#ofertas{
+    background:rgba(230, 223, 223, 0.945);
+} 
+#contactanos{
+    background:rgb(80, 74, 74);
+    margin-bottom: -30px; /* Margen inferior */
+
+}
+/*--------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Busqueda*/
+/*body{
+    margin:0;
+    padding: 0;
+    background: rgba(230, 223, 223, 0.945);/*Color de fondo*//*
+    font-family: sans-serif;
+}
+.box{
+    position: absolute;
+    top:8%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+input.src{
+    padding: 9px 10px 9px 32px;
+    outline: none;
+    font-size: 18px;
+    border-radius: 15px;
+    color: #444;
+    border: 3px solid #a50559;
+
+    width: 104px;
+    transition: all 1s;
+}
+input.src:hover{
+    width: 200px;
+    background-color: #fff;
+    border-color: #8c10b3;
+    box-shadow: 0 0 5px #6dcff680;
+}*/
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Carrusel de fotos*/
+/*galeria2{
+    display: flex;
+    overflow-y: auto;
+    padding: 16px;
+}
+card{
+    margin-right: 10px;
+    position: relative;
+}
+.cuerpo-card{
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    background-color: aquamarine;
+    color: #fff;
+}
+.cuerpo-card h5,
+.cuerpo-card p {
+    margin: 0;
+}
+.card img{
+    width: 200px;
+    object-fit: cover;
+    height: 300px;
+}*/
+/*--------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Galeria de fotos del inicio*/
+.image-gallery {
+ display: flex;
+ flex-direction: row; /* Establece la dirección del flujo en horizontal */
+ justify-content: flex-start; /* Alinea las imágenes en el lado izquierdo */
+ align-items: flex-start; /* Alinea las imágenes en la parte superior */
+ width: 600px;
+ height: 430px;
+} 
+.image-gallery img {
+ width: 0px;
+ flex-grow: 1;
+ object-fit: cover;
+ opacity: .8;
+ transition: .5s ease;
+ margin-right: -29.5px;
+ margin-top: -250px; /* Ajusta el margen superior */
+ border-radius: 20px;
+}
+.image-gallery img:hover {
+ cursor: crosshair;
+ width: 300px;
+ opacity: 1;
+ filter: contrast(120%);
+}
+section#inicio {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+}
+.image-gallery {
+ margin-left: 670px; /* Ajusta el margen izquierdo para posicionar la galería en el lado izquierdo */
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Paquetes*/
+.paquetes{
+    max-width: 1100px;
+    width: 100%;
+    margin: 40px auto;
+    display: flex;
+}
+.mostrador{
+    width: 100%;
+    transition: .5s ease;
+}
+.mostrador .fila{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.mostrador .fila .item{
+    max-width: 210px;
+    padding: 30px;
+    height: auto;
+    text-align: left;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: .3s;
+    box-shadow: 0 0 10px rgba(230, 223, 223, 0.945); /* Agrega esta línea */
+    
+}
+.mostrador .fila .item:hover{
+    background-color: #88889b;
+}
+.mostrador .fila .item img{
+    width: 100%;
+    margin: 30px 0;
+    border-radius: 20px;
+}
+.mostrador .fila .item .descripcion{
+    color: #000000;
+    font-weight: bold;
+    text-align: left;
+    font-size: 22px;
+}
+.mostrador .fila .item .precio{
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+}
+.comentario {
+    font-style: italic;
+    color: rgb(29, 28, 28);
+    text-align: left;
+}
+
+.custom-font {
+    font-family: "Courier New", monospace;
+    font-size: 16px; /* Tamaño de fuente personalizado */
+}
+
+
+/*Se abre la ventana con la descripcion*/
+.seleccion {
+    transition: .5s ease;
+    opacity: 0;
+    width: 40%; /* Cambia el ancho inicial a un valor diferente de 0% */
+    max-width: 400px; /* Agrega esta línea para limitar el ancho máximo */
+    height: auto;
+    border: 1px solid #ccc;
+    position: absolute; /* Agrega esta línea para posicionar el contenedor correctamente */
+    top: 150%; /* Ajusta la posición vertical según tus necesidades */
+    right: 0; /* Ajusta la posición horizontal según tus necesidades */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+.cerrar{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+.info{
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.info img{
+    display: block;
+    margin: 30px;
+    width: 80%;
+}
+.info h2{ /*Nombre del planeta*/
+    color: #707070;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    font-family: "Courier New", monospace;
+}
+.info p{ /*Descripcion*/
+    font-size: 14px;
+    color: #707070;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    font-family: "Courier New", monospace;
+}
+.info .precio{
+    font-size: 30px;
+    font-weight: bold;
+    color: #0f0f11;
+    margin-bottom: 5px;
+    display: block;
+}
+.info .fila{
+    display: flex;
+    align-items: flex-end;
+}
+.info .fila label{ /*Cantidad de pasajeros*/
+    display: block;
+    margin-bottom: 10px;
+}
+.info .fila select{
+    width: 100px;
+    font-size: 18px;
+    padding: 6px;
+    margin-right: 10px;
+}
+.info .fila button2 {
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 70px;
+    margin-top: 10px;
+    color: #a50559 !important;
+    border: 1px solid #a50559;
+    border-radius: 4px;
+    transition: all 400ms ease;
+    text-align: center;
+}
+
+.info .fila button2:hover {
+    background: #a50559;
+    color: #fffcfc !important;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Contactanos*/
+.buttons {
+    min-width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 100px; 
+    
+}
+.buttons a {
+    text-decoration: none;
+    font-size: 28px;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    background: #020608;
+    color: #f1f1f1;
+    border-radius: 50%;
+    transition: all .4s ease-in-out;
+    margin: 0 10px; 
+    border: 2px solid #a50559;
+}
+.buttons a:hover {
+    transform: scale(1.2);
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Destacado*/
+.container{
+    width: 100%;
+    display: flex;
+    max-width: 1100px;
+    justify-content: center; /* Centrar horizontalmente el contenido de la sección */
+    margin: 0 auto; /* Centrar la sección en la página */   
+}
+.card{
+    width: 100%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+    display: flex; /* Cambiar a "flex" para centrar verticalmente el contenido de la tarjeta */
+    flex-direction: column; /* Alinear el contenido de la tarjeta en una columna */
+    align-items: center; /* Centrar verticalmente el contenido de la tarjeta */
+}
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    transform: translateY(-3%);
+}
+.card img{
+    width: 100%;
+    height: auto; /* Cambiar a "auto" para mantener la proporción */
+    object-fit: cover; /* Ajustar la imagen manteniendo la proporción y recortando si es necesario */
+    display: block; /* Asegurarse de que la imagen se comporte como un bloque */
+    margin: 0 auto; /* Centrar la imagen horizontalmente */
+}
+.card .contenido{
+    padding: 15px;
+    text-align: flex-start;
+    flex-grow: 1; /* Permitir que el contenido de la tarjeta crezca verticalmente */
+    display: flex; /* Agregar "flex" para centrar verticalmente el contenido del contenedor */
+    flex-direction: column; /* Alinear el contenido del contenedor en una columna */
+    justify-content: flex-start; /* Centrar verticalmente el contenido del contenedor */
+}
+.card .contenido p{ /*Precio*/
+    line-height: 1.5;
+    margin-bottom: -5px;
+    color: #000000;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+}
+.card .contenido h3{ /*Descripcion de ofertas*/
+    font-weight: 400;
+    margin-bottom: -5px;
+    font-size: 16px;
+    color:#080808; 
+}
+/*Para comprar*/
+.card .contenido a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px;
+    margin-top: 10px;
+    color: #a50559;
+    border: 1px solid #a50559;
+    border-radius: 4px;
+    transition: all 400ms ease;
+    text-align: center;
+}
+.card .contenido a:hover{
+    background: #a50559;
+    color:#fff;
+}
+
+/*Dejanos tu opinion*/
+.opinion-link {
+    position: fixed;
+    top: 25px; /* Ajusta la posición vertical */
+    right: 950px; /* Ajusta la posición horizontal */
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    border: 3px solid #a50559;
+    border-radius: 50px;
+     z-index: 9999; /* Asegura que esté por encima de otros elementos */
+}
+.opinion-link:hover {
+    background-color: #a50559;
+}
+
